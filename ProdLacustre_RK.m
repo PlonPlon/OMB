@@ -22,6 +22,9 @@ Nsol = N;   #Matrice dans laquelle on stocke toutes les solutions de N
 Psol = P;   #Matrice dans laquelle on stocke toutes les solutions de P
 Zsol = Z;   #Matrice dans laquelle on stocke toutes les solutions de Z
 
+
+#Boucle en temps :
+
 for i = 1:n
   
   t = t + dt;
@@ -47,6 +50,7 @@ figure(1) #Toutes les courbes sur un même graphique
 
 plot(T,Nsol,'b',T,Psol,'g',T,Zsol,'r')
 legend('Azote','Algue','Metynnis')
-xlabel('Temps (jour)')
+xlabel('Temps (jours)')
+title("Modélisation de la production lacustre en utilisant la méthode de Runge Kutta d'ordre 4")
 ylabel('Concentration en Azote (u.mole.N.l.^{-1})')
 grid on

@@ -3,9 +3,9 @@ clear all, close all
 #Initialisation :
 #       Partie commune :
 
-t0 = 1;
-tf = 365*20;
-dt = 1;
+t0 = 0;
+tf = 365*1;
+dt = 0.1;
 n = tf/dt;
 t = t0;
 T = t; #Matrice dans laquelle on stocke tous les temps
@@ -91,7 +91,7 @@ figure(1) #Toutes les courbes sur un même graphique
 plot(T,Nsol,'b',T,Psol,'g',T,Zsol,'r',T,Lsol,'k')
 legend('Azote','Algue','Metynnis','Marsu')
 xlabel('Temps (jour)')
-ylabel('Concentration en Azote (u.mole.N.l.^{-1})')
+ylabel('Concentration en Azote (\mumole N.l.^{-1})')
 grid on
 
 figure(2)
@@ -99,5 +99,5 @@ figure(2)
 plot(T,Lsol,'k',T,Zsol,'r')
 legend('Marsu','Metynnis')
 xlabel('Temps (jour)')
-ylabel('Concentration en Azote (u.mole.N.l.^{-1})')
+ylabel('Concentration en Azote (\mumole N.l.^{-1})')
 grid on

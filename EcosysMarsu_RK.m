@@ -4,8 +4,8 @@ clear all, close all
 #       Partie commune :
 
 t0 = 1;
-tf = 365*20;
-dt = 1;
+tf = 365*1;
+dt = 0.1;
 n = tf/dt;
 t = t0;
 T = t; #Matrice dans laquelle on stocke tous les temps

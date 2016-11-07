@@ -1,0 +1,32 @@
+## Fonction Croissance Marsu
+## Calcule le flux de l'équations différentielles utilisée dans le modèle de croissance du Marsupilami.
+
+
+function [dLdt] = CroissMarsu(t,Z,L,Data)
+
+
+# Variables du modèle de croissance du Marsu
+
+Linf = 120; #Longueur théorique Max du Marsu en cm
+
+Tref = 37 + 273; #Température de référence en °K
+
+TA = 8000; #Température d'd’Arrhénius
+
+Kref = 0.03*30; #
+
+# Calcul du modèle de la correction de température
+
+#Extraction des températures
+
+T = 273 + Data(t,2);
+
+cT = exp(TA/Tref - TA/T);
+
+# Calcul du modèle de croissance marsupilami
+
+dLdt = cT*Kref*(Linf*Z-L);
+
+
+
+endfunction

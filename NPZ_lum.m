@@ -32,7 +32,7 @@ if t < 366
   
     fI0 = IntensiteLum(2,2)*x;
     
-      eslseif t < 1096
+      elseif t < 1096
       
       fI0 = IntensiteLum(3,2)*x;
       

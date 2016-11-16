@@ -1,12 +1,12 @@
 clear all ,close all
 
 #Initialisation :
-tic
+
 #  Variables communes :
 
 t0 = 1;
 tf = 365*12;
-dt = 0.1;
+dt = 1;
 n = tf/dt;
 t = t0;
 T = t; #Matrice dans laquelle on stocke tous les temps
@@ -107,7 +107,7 @@ ylabel('Concentration en Azote (\mumole N.l.^{-1})')
 grid on
 
 
-figure (2)
+figure(2)
 
 #subplot(2,1,2)
 
@@ -121,5 +121,3 @@ xlabel('Temps (jour)');
 ylabel(hax(1),'Taillen (cm)');
 ylabel(hax(2),'Concentration en Azote (\mumole N.l.^{-1})');
 grid on
-
-toc

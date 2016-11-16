@@ -22,43 +22,45 @@ gamma = 0.7; #(sans dimension) proportion d’azote assimilée par les Métynnis
 
 # Variation de l'intensité lumineuse
 
-x = IntensiteLum(1,2)/(0.25*IntensiteLum(2,2));
+Inorm = IntensiteLum(1,2);
+
+I0 = -Inorm/log(0.75);
 
 if t < 366
-
-  fI0 = IntensiteLum(1,2)*x;
+  
+  fI0 = 1 - exp(-IntensiteLum(1,2)/I0);
   
   elseif t < 731
   
-    fI0 = IntensiteLum(2,2)*x;
+    fI0 = 1 - exp(-IntensiteLum(2,2)/I0);
     
       elseif t < 1096
       
-      fI0 = IntensiteLum(3,2)*x;
+      fI0 = 1 - exp(-IntensiteLum(3,2)/I0);
       
         elseif t < 1461
         
-        fI0 = IntensiteLum(4,2)*x;
+        fI0 = 1 - exp(-IntensiteLum(4,2)/I0);
         
           elseif t < 1826
           
-          fI0 = IntensiteLum(5,2)*x;
+          fI0 = 1 - exp(-IntensiteLum(5,2)/I0);
           
             elseif t < 2191
             
-            fI0 = IntensiteLum(6,2)*x;
+            fI0 = 1 - exp(-IntensiteLum(6,2)/I0);
             
               elseif t < 2556
               
-              fI0 = IntensiteLum(7,2)*x;
+              fI0 = 1 - exp(-IntensiteLum(7,2)/I0);
               
                 elseif t < 2921
                 
-                fI0 = IntensiteLum(8,2)*x;
+                fI0 = 1 - exp(-IntensiteLum(8,2)/I0);
                 
                   else t > 2921
                   
-                  fI0 = IntensiteLum(9,2)*x;
+                  fI0 = 1 - exp(-IntensiteLum(9,2)/I0);
 end
 
 
